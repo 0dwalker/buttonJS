@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Button JS</title>
+        <link rel="stylesheet" href="buttonStyles.css" type="text/css">
+    </head>
+    <body>
+
+        <section id="bb1" class="bigbox">
+            <h3 class="subtitle">Challenge 1</h3>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button onclick="nightmode()">Night Mode</button>
+        </section>
+
+        <section id="bb2" class="bigbox">
+            <h3 class="subtitle">Challenge 2</h3>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button onclick="toggleDayNight()">Toggle Day/Night Mode</button>
+        </section>
+
+        <section id="bb3" class="bigbox">
+            <h3 class="subtitle">Challenge 3</h3>
+            <div class="content gp">
+                <p>Gramps</p>
+                <div class="p">
+                    <p>Pops</p>
+                    <div class="c">
+                        <p>Me</p>
+                    </div>
+                    <div class="c">
+                        <p>Bro</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="gaussianDiagram()">The Family Blood Line</button>
+        </section>
+
+        <section id="bb4" class="bigbox">
+            <h3 class="subtitle">Challenge 4</h3>
+            <div class="content">
+                <ul>
+                    <li>thing 1</li>
+                    <li>thing 2</li>
+                    <li class="fish">one fish</li>
+                    <li class="fish">two fish</li>
+                    <li class="fish">red fish</li>
+                    <li class="fish">blue fish</li>
+                </ul>
+            </div>
+            <button onclick="seuss()">Technicolor Fish</button>
+        </section>
+
+        <section id="bb5" class="bigbox">
+            <h3 class="subtitle">Challenge 5</h3>
+            <div class="content">
+                <span>20</span>
+            </div>
+            <br>
+            <button onclick="add1()">+1</button>
+            <button onclick="add10()">+10</button>
+        </section>
+        <section id="bb6" class="bigbox">
+            <h3 class="subtitle">Challenge 6</h3>
+            <div class="content">
+                <p>hi how is it going </p>
+            </div>
+            <button onclick="backgroundChange()">Change Background</button>
+        </section>
+    </body>
+    <script type="text/javascript">
+
+       function nightmode(){
+             const doc = document;
+             let section1 = doc.querySelector('#bb1');
+             let subtitle = doc.querySelector('#bb1 > h3');
+             let para = doc.querySelector('#bb1 > div > p');
+             section1.style.backgroundColor = "black";
+             subtitle.style.color = "#ffffff";
+             para.style.color = "#ffffff";
+       }
+
+       function toggleDayNight(){
+             const doc = document;
+             let section2 = doc.querySelector('#bb2');
+             let subtitle2 = doc.querySelector('#bb2 > h3');
+             let para2 = doc.querySelector('#bb2 > div > p');
+             section2.classList.toggle('night');
+             subtitle2.classList.toggle('night');
+             para2.classList.toggle('night');
+       }
+
+        function gaussianDiagram(){
+            const doc = document;
+            let gp = doc.querySelector('.gp');
+            let p = doc.querySelector('.p');
+            let c = doc.querySelectorAll('.c');
+            gp.style.backgroundColor = "#550000";
+            p.style.backgroundColor = "#991100";
+            c[0].style.backgroundColor = "#dd1111";
+            c[1].style.backgroundColor = "#dd1111";
+        }
+
+       function seuss(){
+            const doc = document;
+            let fish = doc.querySelectorAll('.fish');
+            fish[2].style.color = "red";
+            fish[3].style.color = "blue";
+       }
+
+        function add1(){
+            const doc = document;
+            let span = doc.getElementsByTagName('span');
+            let value = Number(doc.querySelector('span').innerHTML);
+            value++;
+            doc.querySelector('span').innerHTML = value;
+       }
+       function add10(){
+           const doc = document;
+           let span = doc.getElementsByTagName('span');
+           let value = Number(doc.querySelector('span').innerHTML);
+           value = value + 10;
+           doc.querySelector('span').innerHTML = value;
+      }
+      function backgroundChange(){
+        const doc = document;
+        let bb6 = doc.querySelector('#bb6');
+        let value = Math.random()
+        bb6.style.backgroundColor = value;
+      }
+    </script>
+</html>
