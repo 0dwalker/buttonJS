@@ -36,3 +36,10 @@ button{
       background-color: black;
       color: #ffffff;
 }
+.bigbox2{
+    width: 484px;
+    height: 284px;
+    background-color: gray;
+    border: 10px solid black;
+    margin: 10px auto;
+    padding: 8px;
