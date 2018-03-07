@@ -64,10 +64,10 @@
             <button onclick="add1()">+1</button>
             <button onclick="add10()">+10</button>
         </section>
-        <section id="bb6" class="bigbox2">
-            <h3 class="subtitle1">Challenge 6</h3>
+        <section id="bb6" class="bigbox">
+            <h3 class="subtitle">Challenge 6</h3>
             <div class="content">
-                <p class = "colorfultext" >Hi, how is it going? </p>
+                <p>hi how is it going </p>
             </div>
             <button onclick="backgroundChange()">Change Background</button>
         </section>
@@ -129,12 +129,9 @@
       function backgroundChange(){
         const doc = document;
         let bb6 = doc.querySelector('#bb6');
-        let text = doc.querySelector('.colorfultext');
-        let header = doc.querySelector('.subtitle1');
         bb6.style.backgroundColor = "#" + Math.floor(Math.random() * 1000000);
-        bb6.style.borderColor = "#" + Math.floor(Math.random() * 1000000);
-        text.style.color = "#" + Math.floor(Math.random() * 1000000);
-        header.style.color = "#" + Math.floor(Math.random() * 1000000);
+        //let subtitle = doc.querySelector('.subtitle');
+        //subtitle.style.color = "#" + Math.floor(Math.random() * 1000000);
       }
     </script>
 </html>
